@@ -10,6 +10,7 @@ const ViewsPath = path.join(__dirname,'/views/pages')
 
 const app = express()
 
+const port_no = process.env.PORT || 3000
 
 app.set('view engine','hbs')
 app.set('views',ViewsPath)
@@ -63,6 +64,6 @@ app.get('*',(req,res)=>{
     res.render('404')
 })
 
-app.listen(3000,()=>{
-    console.log('Server running on port 300')
+app.listen(port_no,()=>{
+    console.log('Server running on port '+ port_no)
 })
