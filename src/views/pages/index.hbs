@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Insta Weather</title>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+    </head>
+    <body>
+        {{>header}}
+        <div class="title">
+            <h1> Welcome To Insta Weather!</h1>
+        </div> 
+          
+        <div class="container search">
+            <div class="row " >
+                <div class="col-sm-8 mx-auto">
+                    <form >
+                    <input type="text" placeholder="Enter a location" class="form-control">    
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn ">Search</button>
+                    
+                </div>
+                </form>
+            </div>
+        </div>
+            <div class="container inner-con x " style="display:none;">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <p id="place"></p>
+                    </div>    
+                </div>
+                <div class="row">
+                    <p id="temp"> </p>     
+                </div>
+                <div class="row ">    
+                    <img id="logo" src="" >
+                    <p id="summary"> </p>
+                </div>
+            </div>
+         
+            <div class="container ">     
+                <div class="row bottom">
+                    <div class="col-sm-6 a x" style="display:none;">
+                        <div><h2 id="c2"></h2></div>
+                        <div><h3>Humidity</h3></div>
+                    </div>
+                    <div class="col-sm-6 x" style="display:none;">
+                        <div ><h2 id="c3"></h2></div>
+                        <div><h3>Wind Speed</h3></div>
+                    </div>
+                </div>
+            </div>
+        
+    
+
+
+
+
+    <script  src="/script/app.js"></script>
+    {{>footer}}
+    </body>
+</html>
