@@ -18,7 +18,11 @@ app.use(express.static(HomePagePath))
 
 hbs.registerPartials(PartialsPath)
 app.get('',(req,res)=>{
-    res.render('index')
+    res.render('index',{
+        activeA : 'active'
+    }
+    )
+
 })
 
 app.get('/weather',(req,res)=>{
@@ -55,8 +59,7 @@ geocode(req.query.location,(error,{lat,lon,loc}={})=>{
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:'Weather forecast',
-        name:'Ivan '
+        activeB:'active'
     })
 })
 
